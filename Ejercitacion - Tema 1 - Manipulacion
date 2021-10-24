@@ -1,1 +1,27 @@
+/*---------- 1. ----------*/
+CREATE TABLE CURSO(
+  codigo_de_curso INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  nombre VARCHAR(20) NOT NULL,
+  descripcion VARCHAR(100),
+  turno VARCHAR(10) NOT NULL);
+                              
+/*---------- 2. ----------*/                              
+ALTER TABLE CURSO ADD cupo NUMERIC;
 
+/*---------- 3. ----------*/
+INSERT INTO CURSO (codigo_de_curso, nombre, descripcion, turno, cupo) VALUES (101, "Algoritmos","Algoritmos y Estructuras de Datos","Mañana",35);
+INSERT INTO CURSO (codigo_de_curso, nombre, descripcion, turno, cupo) VALUES (102, "Matemática Discreta","","Tarde",30);
+
+/*---------- 4. ----------*/
+/*  INSERT INTO CURSO (codigo_de_curso, nombre, turno, cupo) VALUES (103, "","","Tarde",30);  */
+
+/*---------- 5. ----------*/
+/*  INSERT INTO CURSO (codigo_de_curso, nombre, turno, cupo) VALUES (102, "Matemática Discreta","","Tarde",30);  */
+
+/*---------- 6. ----------*/
+UPDATE CURSO SET cupo = 25;
+
+/*---------- 7. ----------*/
+DELETE FROM CURSO WHERE nombre = "Algoritmos";
+   
+  
