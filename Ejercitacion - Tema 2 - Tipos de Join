@@ -1,1 +1,119 @@
+CREATE TABLE CURSO(
+  codigo INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  nombre VARCHAR(20) NOT NULL,
+  descripcion VARCHAR(100),
+  cupo INTEGER,
+  turno VARCHAR(10) NOT NULL,
+  PROFESOR_id INTEGER);
+  
+  CREATE TABLE PROFESOR(
+  id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  nombre VARCHAR(20),
+  apellido VARCHAR(100),
+  fecha_nacimiento DATE,
+  salario NUMERIC);
+  
+  
+  INSERT INTO CURSO (
+  codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
+  101,
+  "Algoritmos",
+  "Algoritmos y Estructuras de Datos",
+  20,  
+  "Mañana",
+  1)
+  
+  INSERT INTO CURSO (
+  codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
+  102,
+  "Matematica Discreta",
+  "",
+  20,  
+  "Tarde",
+  2)
+
+INSERT INTO CURSO (
+  codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
+  103,
+  "Programacion Java",
+  "POO en Java",
+  35,  
+  "Noche",
+  4)
+  
+  INSERT INTO CURSO (
+  codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
+  104,
+  "Programacion Web",
+  "",
+  35,  
+  "Noche",
+  5)
+
+INSERT INTO CURSO (
+  codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
+  105,
+  "Programacion C#",
+  ".NET, Visual Studio 2019",
+  30,  
+  "Noche",
+  6)
+  
+  
+  
+  
+  INSERT INTO PROFESOR (
+  id, nombre, apellido, fecha_nacimiento, salario) VALUES (
+  1,
+  "Juan",
+  "Perez",
+  "1990-06-06",  
+  55000);
+  
+  INSERT INTO PROFESOR (
+  id, nombre, apellido, fecha_nacimiento, salario) VALUES (
+  2,
+  "Maria Emilia",
+  "Paz",
+  "1984-07-15",  
+  72000);
+  
+  INSERT INTO PROFESOR (
+  id, nombre, apellido, fecha_nacimiento, salario) VALUES (
+  3,
+  "Martin",
+  "Correa",
+  "1987-12-07",  
+  63000);
+
+INSERT INTO PROFESOR (
+  id, nombre, apellido, fecha_nacimiento, salario) VALUES (
+  4,
+  "Lucia",
+  "Diaz",
+  "1991-02-24",  
+  45000);
+
+INSERT INTO PROFESOR (
+  id, nombre, apellido, fecha_nacimiento, salario) VALUES (
+  5,
+  "Raul",
+  "Martinez",
+  "1980-10-15",  
+  85000);
+
+INSERT INTO PROFESOR (
+  id, nombre, apellido, fecha_nacimiento, salario) VALUES (
+  6,
+  "Mabel",
+  "Rios",
+  "1982-06-12",  
+  83000);
+
+
+
+SELECT PROFESOR.apellido , CURSO.nombre, CURSO.turno
+FROM PROFESOR LEFT JOIN CURSO ON PROFESOR.id = CURSO.PROFESOR_id;
+
+
 
