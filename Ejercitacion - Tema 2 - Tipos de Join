@@ -1,3 +1,5 @@
+/* ---------- Creacion tablas ----------*/
+
 CREATE TABLE CURSO(
   codigo INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
   nombre VARCHAR(20) NOT NULL,
@@ -21,8 +23,10 @@ CREATE TABLE CURSO(
   "Algoritmos y Estructuras de Datos",
   20,  
   "Mañana",
-  1)
-  
+  1);
+
+/*---------- Insercion atributos ----------*/
+
   INSERT INTO CURSO (
   codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
   102,
@@ -30,7 +34,7 @@ CREATE TABLE CURSO(
   "",
   20,  
   "Tarde",
-  2)
+  2);
 
 INSERT INTO CURSO (
   codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
@@ -39,7 +43,7 @@ INSERT INTO CURSO (
   "POO en Java",
   35,  
   "Noche",
-  4)
+  4);
   
   INSERT INTO CURSO (
   codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
@@ -48,7 +52,7 @@ INSERT INTO CURSO (
   "",
   35,  
   "Noche",
-  5)
+  5);
 
 INSERT INTO CURSO (
   codigo, nombre, descripcion, cupo, turno, PROFESOR_id) VALUES (
@@ -57,7 +61,7 @@ INSERT INTO CURSO (
   ".NET, Visual Studio 2019",
   30,  
   "Noche",
-  6)
+  6);
   
   
   
@@ -111,6 +115,7 @@ INSERT INTO PROFESOR (
   83000);
 
 
+/* ---------- Seleccion ----------*/
 
 SELECT PROFESOR.apellido , CURSO.nombre, CURSO.turno
 FROM PROFESOR LEFT JOIN CURSO ON PROFESOR.id = CURSO.PROFESOR_id;
